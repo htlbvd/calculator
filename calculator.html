@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>计算器</title>
+    <link href='calculator.css' type='text/css' rel='stylesheet'>
+  </head>
+  <body>
+    <header></header>
+    <main id='calc'>
+      <div id='history-box'>{{history}}</div>
+      <div id='show-box'>{{show}}</div>
+      <div id='operate-box' v-on:click='clifunc($event)'>
+        <button id='sin' class='unary' data-type='una'>sin</button>  <button id='cos' class='unary' data-type='una'>cos</button>  <button id='tan' class='unary' data-type='una'>tan</button>  <button id='cot' class='unary' data-type='una'>cot</button>  <button id ='pi' class='constant' data-type='con'>π</button>
+        <button id='exp10' class='unary' data-type='una'>10^x</button> <button id='lg' class='unary' data-type='una'>lgx</button>  <button id='ln' class='unary' data-type='una'>lnx</button>  <button id='log2' class='unary' data-type='una'>log2x</button><button id='eul' class='constant' data-type='con'>e</button>
+        <button id='squ' class='unary' data-type='una'>x^2</button>  <button id='cub' class='unary' data-type='una'>x^3</button>  <button id='sqr' class='unary' data-type='una'>x^1/2</button><button id='cbr' class='unary' data-type='una'>x^1/3</button><button class='unuseble'></button>
+        <button id='rec' class='unary' data-type='una'>x^-1</button> <button id='abs' class='unary' data-type='una'>|x|</button>  <button id='fac' class='unary unuseble' data-type='unaxxxx'>x!</button>   <button id='con' class='unary' data-type='una'>-x</button>   <button class='unuseble'></button>
+        <button id='per' class='unary' data-type='una'>%</button>    <button id='mil' class='unary' data-type='una'>千分号</button><button class='unuseble'></button><button id='clx'>清除x</button><button id='cla'>全清</button>
+        <button id='pow' class='binary' data-type='bin'>x^y</button>  <button id='dvs' class='binary' data-type='bin'>/</button>    <button id='sev' class='number' data-type='num'>7</button><button id='eig' class='number' data-type='num'>8</button><button id='nin' class='number' data-type='num'>9</button>
+        <button id='ext' class='binary' data-type='bin'>y√x</button>  <button id='mul' class='binary' data-type='bin'>*</button>    <button id='fou' class='number' data-type='num'>4</button><button id='fiv' class='number' data-type='num'>5</button><button id='six' class='number' data-type='num'>6</button>
+        <button id='log' class='binary' data-type='bin'>logxy</button><button id='sub' class='binary' data-type='bin'>-</button>    <button id='one' class='number' data-type='num'>1</button><button id='two' class='number' data-type='num'>2</button><button id='thr' class='number' data-type='num'>3</button>
+        <button id='e10' class='binary' data-type='bin'>xEy</button>  <button id='add' class='binary' data-type='bin'>+</button>    <button id='poi' data-type='poi'>.</button><button id='zer' class='number' data-type='num'>0</button><button id='equ' data-type='equ'>=</button>
+        <p></p>
+      </div>
+    </main>
+    <aside>
+      <button class='unary'>一元操作符</button><p>将当前数字设为对当前数字执行操作后得到的数</p>
+      <button class='constant'>常数</button><p>将当前数字设为该常数</p>
+      <button class='binary'>二元操作符</button><p></p>
+      <button class='number'>数字</button><br>
+      规则：
+      需改进：计算时操作数的使用范围，超出范围时如何执行
+      修改当前操作，
+    </aside>
+    <script src='vue.js'></script>
+    <script src='calculator.js'></script>
+  </body>
+</html>

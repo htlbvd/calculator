@@ -1,0 +1,58 @@
+header{
+  float:left;
+  width:calc(50% - 150px);
+  min-height:1px;
+  min-width:1px;
+
+}
+aside{
+  float:right;
+  width:calc(50% - 150px);
+  min-width: 200px;
+}
+#calc{
+  display: inline-block;
+  margin: 0 auto;
+  width:252px;
+}
+#history-box,#show-box{
+  width:250px;
+  height:30px;
+  border:solid green 1px;
+  text-align:right;
+}
+main button{
+  box-sizing: border-box;
+  display:block;
+  float:left;
+  margin:0;
+  padding:0;
+  width:50px;
+  height:30px;
+}
+#operate-box{
+  width:250px;
+  border:solid green 1px;
+}
+#operate-box>p{
+  clear:both;
+}
+.unary{
+  background-color:rgb(255, 200, 200);
+}
+.binary{
+  background-color:rgb(200, 200, 255);
+}
+.constant{
+  background-color: rgb(200, 255, 200);
+}
+.number{
+  background-color: #aaa;
+}
+.unuseble{
+  border:#ccc solid 1px;
+  background-color: #eee;
+}
+.unuseble:active{
+  border:#ccc solid 1px;
+}
