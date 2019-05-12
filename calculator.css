@@ -1,37 +1,43 @@
+ul,ol,button,p{
+  margin:0;
+  padding:0;
+}
+li{
+  margin-left:15px;
+}
 header{
   float:left;
-  width:calc(50% - 150px);
+  width:calc(50% - 200px);
   min-height:1px;
   min-width:1px;
 
 }
 aside{
   float:right;
-  width:calc(50% - 150px);
+  width:calc(50% - 200px);
   min-width: 200px;
 }
 #calc{
   display: inline-block;
   margin: 0 auto;
-  width:252px;
+  width:302px;
 }
 #history-box,#show-box{
-  width:250px;
+  width:300px;
   height:30px;
   border:solid green 1px;
   text-align:right;
 }
 main button{
+  font-size:20px;
   box-sizing: border-box;
   display:block;
   float:left;
-  margin:0;
-  padding:0;
-  width:50px;
-  height:30px;
+  width:60px;
+  height:40px;
 }
 #operate-box{
-  width:250px;
+  width:300px;
   border:solid green 1px;
 }
 #operate-box>p{
@@ -50,9 +56,9 @@ main button{
   background-color: #aaa;
 }
 .unuseble{
-  border:#ccc solid 1px;
+  border:#ccc solid 2px;
   background-color: #eee;
 }
 .unuseble:active{
-  border:#ccc solid 1px;
+  border:#ccc solid 2px;
 }

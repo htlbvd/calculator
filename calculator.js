@@ -84,7 +84,7 @@
             add:(x)=> (y)=> x+y,
             pow:(x)=> (y)=> Math.pow(x,y),
             ext:(x)=> (y)=> Math.pow(x,1/y),
-            log:(x)=> (y)=> Math.log(y)/Math.log(x),
+            log:(x)=> (y)=> Math.log(x)/Math.log(y),
             e10:(x)=> (y)=> x*Math.pow(10,y),
           },
         },
@@ -93,11 +93,9 @@
           show:
             function(){
               if(this.output){
-                //this.operand=Number(this.operand.toFixed(15));
                 return this.operand;
               }else{
-                if(Math.abs(this.operand)>9007199254740992||this.input.length>20){
-                  console.log('数字绝对值大于9007199254740992，引擎不支持,建议重新输入');
+                if(this.operand>9999999999){
                   return this.operand.toExponential();
                 }
                 return this.input;
@@ -105,6 +103,13 @@
             },
           //历史记录
           history:function(){
+            console.log(this.opera[1],this.opera[3]);
+            if(this.opera[1].toString(10).length>9){
+              this.opera[1]=Number(this.opera[1]).toPrecision(5);
+            }
+            if(this.opera[3].toString(10).length>9){
+              this.opera[3]=Number(this.opera[3]).toPrecision(5);
+            }
             return this.opera[0]+'('+this.opera[1]+','+this.opera[2]+'('+this.opera[3]+')'+')';
           },
         },
@@ -125,12 +130,7 @@
                 this.output=0;
               this.input=this.input==='0'?'':(this.input+this.funcs[id]);
               this.operand=parseFloat(this.input);
-              if(Math.abs(this.operand)>9007199254740992||this.input.length>20){
-                console.log('数字绝对值大于9007199254740992，引擎不支持,建议重新输入');
-                this.opera.splice(3, 1,this.operand.toExponential());
-              }else{
-                this.opera.splice(3, 1,this.input);
-              }
+              this.opera.splice(3, 1,this.input);
             }else if(type=='una'||type=='con'){
               //一元或常数
               if(!this.operating){
