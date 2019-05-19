@@ -1,26 +1,29 @@
-ul,ol,button,p{
+body{
+  margin:0;
+}
+ul,ol,button,p,li{
   margin:0;
   padding:0;
 }
 li{
-  margin-left:15px;
+  list-style:none;
 }
 header{
   float:left;
-  width:calc(50% - 200px);
+  width:calc(50% - 151px);
   min-height:1px;
-  min-width:1px;
-
 }
-aside{
-  float:right;
-  width:calc(50% - 200px);
-  min-width: 200px;
-}
-#calc{
-  display: inline-block;
+main{
+  float:left;
   margin: 0 auto;
   width:302px;
+}
+aside{
+  min-width: 200px;
+}
+aside > p:first-child{
+  display:inline-block;
+  min-width:50px;
 }
 #history-box,#show-box{
   width:300px;

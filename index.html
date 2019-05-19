@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <title>计算器</title>
     <link href='calculator.css' type='text/css' rel='stylesheet'>
   </head>
@@ -50,13 +51,15 @@
     </main>
     <aside>
       <p>规则：</p>
-      <button class='unary'>一元操作</button><p>将当前数字设为对当前数字执行操作后得到的数</p>
-      <button class='constant'>常数按键</button><p>将当前数字设为该常数</p>
-      <button class='binary'>二元操作</button><p></p>
-      <button class='number'>数字按键</button><p></p>
-      <button class='unuseble'>暂不可用</button><p></p>
-      
-      <ul>
+      <ol>
+        <p>按键说明:</p>
+        <li><button class='unary'>一元操作</button><p>将当前数字设为对当前数字执行操作后得到的数</p></li>
+        <li><button class='constant'>常数按键</button><p>将当前数字设为该常数</p></li>
+        <li><button class='binary'>二元操作</button><p></p></li>
+        <li><button class='number'>数字按键</button><p></p></li>
+        <li><button class='unuseble'>暂不可用</button><p></p></li>
+      </ol>
+      <ol>
         <p>需改进：</p>
         <li>以浏览器javascript引擎为基础，未对结果做修正</li>
         <li>计算时操作数的使用范围，超出范围时如何执行：tan,cot,log<sub>2</sub>x,ln x,lg x,等</li>
@@ -64,7 +67,7 @@
         <li>阶乘：伽马函数</li>
         <li>历史记录显示区待优化</li>
         <li></li>
-      </ul>
+      </ol>
     </aside>
     <script src='vue.js'></script>
     <script src='calculator.js'></script>
