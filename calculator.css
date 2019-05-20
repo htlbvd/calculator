@@ -8,6 +8,9 @@ ul,ol,button,p,li{
 li{
   list-style:none;
 }
+[v-cloak] { 
+  color:rgba(0,0,0,0) !important;
+ }
 header{
   float:left;
   width:calc(50% - 151px);

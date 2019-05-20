@@ -9,8 +9,8 @@
   <body>
     <header></header>
     <main id='calc'>
-      <div id='history-box'>{{history}}</div>
-      <div id='show-box'>{{show}}</div>
+      <div id='history-box' v-cloak>{{history}}</div>
+      <div id='show-box' v-cloak>{{show}}</div>
       <div id='operate-box' v-on:click='clifunc($event)'>
         <!-- 上半区 -->
         <button id='sin' class='unary' data-type='una'>sin x</button>  <button id='cos' class='unary' data-type='una'>cos x</button>
